@@ -16,8 +16,8 @@ struct ShowView: View {
     var category : String
     var body: some View {
         VStack {
-            MapView(coordinate: coordinate, name: name ).frame(height: 300)
-            CircleImage(image: imageName ).offset(y: -130).padding(.bottom , -130)
+            MapView(coordinate: coordinate, name: name ).frame(height: UIScreen.main.bounds.height * 0.4).ignoresSafeArea(edges : .top)
+            CircleImage(image: imageName ).offset(y: -210).padding(.bottom , -130)
         
             VStack(alignment: .leading) {
                 Text(name) .font(.title).padding(.leading)
